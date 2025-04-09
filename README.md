@@ -23,6 +23,50 @@ Esta release contiene ejemplos de procesamiento de imágenes:
 - Una suscripción de Azure con acceso a los servicios cognitivos
 - Claves de API para los servicios cognitivos correspondientes
 
+## Instalación y descarga
+
+### Opción 1: Clonar el repositorio (Recomendado)
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/AIServicesSolutionsPython.git
+cd AIServicesSolutionsPython
+
+# Crear un entorno virtual
+python -m venv venv
+
+# Activar el entorno virtual
+# En Windows
+venv\Scripts\activate
+# En macOS/Linux
+# source venv/bin/activate
+
+# Instalar dependencias
+pip install -r requirements.txt
+```
+
+### Opción 2: Descargar como ZIP
+
+1. Ve a la [página principal del repositorio](https://github.com/tu-usuario/AIServicesSolutionsPython)
+2. Haz clic en el botón "Code" y selecciona "Download ZIP"
+3. Extrae el archivo ZIP en tu computadora
+4. Abre una terminal en la carpeta extraída
+5. Crea y activa un entorno virtual como se indica arriba
+6. Instala las dependencias: `pip install -r requirements.txt`
+
+### Dependencias principales
+
+Las principales bibliotecas que se utilizan en este proyecto son:
+
+```
+azure-cognitiveservices-vision-computervision
+azure-cognitiveservices-language-textanalytics
+azure-cognitiveservices-speech
+requests
+matplotlib
+pillow
+```
+
 ## Configuración
 
 Para cada ejemplo, necesitarás configurar tus propias claves de API y endpoints de Azure. Busca en cada archivo Python las variables de configuración necesarias.
