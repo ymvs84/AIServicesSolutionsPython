@@ -93,9 +93,9 @@ Aplicación que convierte texto a voz para anunciar la hora actual.
 Ejemplo de cómo extraer texto de diferentes tipos de imágenes utilizando Computer Vision.
 
 ## Autores
-- Carlos Pantoja
-- Aitor Garrido
-- Yago Menendez
+- [Aitor Garrido] (https://github.com/AitorGarYeb99)
+- [Yago Menendez] (https://github.com/ymvs84)
+- [Carlos Pantoja] (https://github.com/pantoja99)
 
 ## Licencia
 
