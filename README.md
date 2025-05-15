@@ -92,6 +92,11 @@ Aplicación que convierte texto a voz para anunciar la hora actual.
 ### Lector de texto en imágenes (Release 3)
 Ejemplo de cómo extraer texto de diferentes tipos de imágenes utilizando Computer Vision.
 
+## Autores
+- Carlos Pantoja
+- Aitor Garrido
+- Yago Menendez
+
 ## Licencia
 
 Este proyecto está bajo la licencia incluida en el archivo LICENSE.
