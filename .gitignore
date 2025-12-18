@@ -1,0 +1,14 @@
+# Entorno Virtual
+venv/
+env/
+.env
+
+# Archivos compilados de Python (Basura)
+__pycache__/
+*.py[cod]
+
+# Datos locales (Opcional: si quieres subir el historial déjalo, si no, descomenta la linea)
+# data/history.json
+
+# VS Code
+.vscode/

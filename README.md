@@ -1,105 +1,97 @@
-# AIServicesSolutionsPython
+# 🐍 Azure AI Services Integration (Python)
 
-Este repositorio contiene una colección de ejemplos prácticos para trabajar con Azure AI Services utilizando Python. El proyecto está organizado en tres releases, cada una enfocada en diferentes aspectos de los servicios cognitivos de Azure.
+<div align="center">
 
-## Estructura del Proyecto
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-Cognitive_Services-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Type Hinting](https://img.shields.io/badge/Code-Type_Hinting-green?style=for-the-badge)
 
-### Release 1: Fundamentos y Análisis de Texto
-Esta release incluye ejemplos básicos de uso de Azure AI Services:
-- **rest-client**: Ejemplo de cómo interactuar con los servicios cognitivos a través de la API REST
-- **sdk-client**: Ejemplo de uso del SDK de Python para Azure Cognitive Services
+**Solución modular en Python para la integración de servicios cognitivos de Azure (Vision, Speech & Text Analytics).**
 
-### Release 2: Servicios de Voz
-Esta release se centra en las capacidades de procesamiento de voz:
-- **speaking-clock**: Aplicación de ejemplo que utiliza el servicio de voz de Azure para crear un reloj parlante
-
-### Release 3: Visión Artificial
-Esta release contiene ejemplos de procesamiento de imágenes:
-- **read-text**: Utiliza el servicio Computer Vision para detectar y extraer texto de imágenes
-
-## Requisitos
-
-- Python 3.8 o superior
-- Una suscripción de Azure con acceso a los servicios cognitivos
-- Claves de API para los servicios cognitivos correspondientes
-
-## Instalación y descarga
-
-### Opción 1: Clonar el repositorio (Recomendado)
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/AIServicesSolutionsPython.git
-cd AIServicesSolutionsPython
-
-# Crear un entorno virtual
-python -m venv venv
-
-# Activar el entorno virtual
-# En Windows
-venv\Scripts\activate
-# En macOS/Linux
-# source venv/bin/activate
-
-# Instalar dependencias
-pip install -r requirements.txt
-```
-
-### Opción 2: Descargar como ZIP
-
-1. Ve a la [página principal del repositorio](https://github.com/tu-usuario/AIServicesSolutionsPython)
-2. Haz clic en el botón "Code" y selecciona "Download ZIP"
-3. Extrae el archivo ZIP en tu computadora
-4. Abre una terminal en la carpeta extraída
-5. Crea y activa un entorno virtual como se indica arriba
-6. Instala las dependencias: `pip install -r requirements.txt`
-
-### Dependencias principales
-
-Las principales bibliotecas que se utilizan en este proyecto son:
-
-```
-azure-cognitiveservices-vision-computervision
-azure-cognitiveservices-language-textanalytics
-azure-cognitiveservices-speech
-requests
-matplotlib
-pillow
-```
-
-## Configuración
-
-Para cada ejemplo, necesitarás configurar tus propias claves de API y endpoints de Azure. Busca en cada archivo Python las variables de configuración necesarias.
-
-## Cómo usar
-
-1. Clona este repositorio
-2. Instala las dependencias necesarias para cada ejemplo
-3. Configura tus claves de API y endpoints de Azure
-4. Ejecuta los ejemplos según las instrucciones específicas de cada carpeta
-
-## Ejemplos destacados
-
-### Cliente REST (Release 1)
-Ejemplo de cómo hacer llamadas directas a la API REST de Azure Cognitive Services.
-
-### Cliente SDK (Release 1)
-Implementación utilizando el SDK oficial de Python que simplifica la integración.
-
-### Reloj parlante (Release 2)
-Aplicación que convierte texto a voz para anunciar la hora actual.
-
-### Lector de texto en imágenes (Release 3)
-Ejemplo de cómo extraer texto de diferentes tipos de imágenes utilizando Computer Vision.
-
-## Autores
-- [Aitor Garrido] (https://github.com/AitorGarYeb99)
-- [Yago Menendez] (https://github.com/ymvs84)
-- [Carlos Pantoja] (https://github.com/pantoja99)
-
-## Licencia
-
-Este proyecto está bajo la licencia incluida en el archivo LICENSE.
+</div>
 
 ---
-*Proyecto desarrollado como parte del curso de Desarrollo Junior Cloud Azure, 2025.*
+
+## 📋 Descripción
+
+Este proyecto implementa una arquitectura de servicios para consumir las APIs de Inteligencia Artificial de Azure. A diferencia de scripts lineales simples, este repositorio utiliza **Programación Orientada a Objetos (OOP)** y principios de **Clean Code** para separar la lógica de negocio, la configuración y la interfaz de usuario.
+
+El sistema unifica tres capacidades principales:
+1.  **Text Analytics:** Detección de idioma y análisis de confianza.
+2.  **Speech Services:** Transcripción de audio a texto (Speech-to-Text) mediante micrófono.
+3.  **Computer Vision:** Extracción de texto (OCR) y dibujado dinámico de bounding boxes sobre las imágenes analizadas.
+
+## 🏗️ Arquitectura
+
+El proyecto ha sido refactorizado para seguir una estructura escalable:
+
+* **Modularidad:** Cada servicio de Azure (Vision, Speech, Text) tiene su propia clase dedicada en la carpeta `services/`.
+* **Configuración Segura:** Uso de variables de entorno (`.env`) para la gestión de credenciales.
+* **Type Hinting:** Código moderno con tipado estático para mayor robustez.
+* **Gestión de Datos:** Persistencia local de historial en JSON.
+
+### Estructura del Proyecto
+```text
+AIServicesSolutionsPython/
+├── services/           # Lógica encapsulada
+│   ├── text_service.py
+│   ├── speech_service.py
+│   └── vision_service.py
+├── data/               # Assets e Historial
+│   └── images/
+├── main.py             # Punto de entrada (CLI Menu)
+├── requirements.txt    # Dependencias
+└── .env                # Configuración (Ignorado en Git)
+```
+
+⚙️ Instalación y Uso
+1. Clonar el repositorio
+Bash
+
+git clone [https://github.com/ymvs84/AIServicesSolutionsPython.git](https://github.com/ymvs84/AIServicesSolutionsPython.git)
+cd AIServicesSolutionsPython
+
+2. Crear Entorno Virtual
+
+Es recomendable usar un entorno virtual para aislar las dependencias:
+Bash
+
+# Windows
+python -m venv venv
+.\venv\Scripts\Activate
+
+# Linux/Mac
+python3 -m venv venv
+source venv/bin/activate
+
+3. Instalar Dependencias
+Bash
+
+pip install -r requirements.txt
+
+4. Configuración
+
+Crea un archivo .env en la raíz basándote en .env.example y añade tus claves de Azure:
+Ini, TOML
+
+AI_SERVICE_ENDPOINT="[https://tu-endpoint.cognitiveservices.azure.com/](https://tu-endpoint.cognitiveservices.azure.com/)"
+AI_SERVICE_KEY="tu-clave"
+SPEECH_KEY="tu-clave-speech"
+SPEECH_REGION="westeurope"
+
+5. Ejecutar
+Bash
+
+python main.py
+
+🛠️ Tecnologías
+
+    Python 3.10+
+
+    Azure SDKs: azure-ai-textanalytics, azure-ai-vision, azure-cognitiveservices-speech
+
+    Pillow (PIL): Procesamiento de imágenes.
+
+    Dotenv: Gestión de entornos.
+
+Autor: Yago Menéndez
